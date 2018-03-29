@@ -38,9 +38,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Sobrenome"
+        android:hint="Instituição"
         android:background="@color/grey"
-        android:id="@+id/sobrenome"
+        android:id="@+id/instituição"
         android:layout_marginVertical="12px"
 
         />

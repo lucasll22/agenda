@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.lucas2.agenda.MainScreen">
 
-    <android.support.design.widget.AppBarLayout
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:layout_weight="0.95"
+        android:id="@+id/tela"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_weight="0.05"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="0.33"
+            android:text="Provas"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="0.33"
+            android:text="Trabalhos"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="0.34"
+            android:text="Matérias"
+            android:layout_height="match_parent" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    </android.support.design.widget.AppBarLayout>
+    </LinearLayout>
 
-    <include layout="@layout/content_main_screen" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
