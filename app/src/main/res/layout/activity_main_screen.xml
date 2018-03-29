@@ -21,16 +21,23 @@
             android:layout_width="0px"
             android:layout_weight="0.33"
             android:text="Provas"
+            android:id="@+id/provas"
+            android:onClick="buttonMenu"
             android:layout_height="match_parent" />
         <Button
             android:layout_width="0px"
             android:layout_weight="0.33"
             android:text="Trabalhos"
+            android:id="@+id/trabalhos"
+            android:onClick="buttonMenu"
             android:layout_height="match_parent" />
         <Button
             android:layout_width="0px"
             android:layout_weight="0.34"
             android:text="Matérias"
+            android:id="@+id/materias"
+            android:onClick="buttonMenu"
+
             android:layout_height="match_parent" />
 
 

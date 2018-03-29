@@ -16,7 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainScreen"></activity>
+        <activity android:name=".MainScreen"
+            android:label="Agenda"/>
+        <activity android:name=".Materias"
+            android:label="Meterias"/>
+        <activity android:name=".Provas"
+            android:label="Provas"/>
+        <activity android:name=".Trabalhos"
+            android:label="Trabalhos"/>
     </application>
 
 </manifest>
