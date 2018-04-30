@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Agenda</string>
     <string name="title_activity_main_screen">MainScreen</string>
+    <string name="title_activity_nova_materia">NovaMateria</string>
+    <string name="descri_o">Descrição</string>
+    <string name="dia">Dia</string>
+    <string name="adicionar">adicionar</string>
+    <string name="materia">Materia</string>
+    <string name="data">Data</string>
+    <string name="hora">Hora</string>
 </resources>
