@@ -20,7 +20,7 @@ public class Trabalhos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trabalhos);
 
-        trabalhos = (ArrayList<Trabalho>) getIntent().getSerializableExtra("trabalhos");
+        // ------------Carregar do banco e atualizar a lista
 
         ArrayAdapter<Trabalho> adTrabalhos =
                 new ArrayAdapter<Trabalho>(this, android.R.layout.simple_list_item_1, trabalhos);

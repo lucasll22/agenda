@@ -28,8 +28,7 @@ public class Provas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provas);
 
-        provas = (ArrayList<Prova>) getIntent().getSerializableExtra("provas");
-
+        // --------------------- carregar trabalhos e atualizar lista
 
         ArrayAdapter<Prova> adProvas =
                 new ArrayAdapter<Prova>(this, android.R.layout.simple_list_item_1, provas);
@@ -38,19 +37,6 @@ public class Provas extends AppCompatActivity {
         listaProvas.setAdapter(adProvas);
 
 
-    }
-
-    public void carregarProvas(){
-        try {
-            InputStream in = openFileInput("provas");
-            ObjectInputStream oin = new ObjectInputStream(in);
-            provas = (ArrayList<Prova>) oin.readObject();
-            Log.w("leituraProvas", Integer.toString(provas.size()));
-        }
-        catch (Exception E)
-        {
-            E.printStackTrace();
-        }
     }
 
     public void adicionarProva(View view) {

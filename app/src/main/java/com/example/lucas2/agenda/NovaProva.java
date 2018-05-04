@@ -14,7 +14,7 @@ import java.util.Locale;
 
 public class NovaProva extends AppCompatActivity {
 
-    //Um calendário deve ser aperto para a definição da data
+    //Um calendário deve ser aberto para a definição da data
     Calendar myCalendar = Calendar.getInstance();
     EditText txtData;
 
@@ -25,10 +25,14 @@ public class NovaProva extends AppCompatActivity {
         setContentView(R.layout.activity_nova_prova);
 
         txtData = findViewById(R.id.provaData);
+        //Desativando entrada de texto no campo data
         txtData.setInputType(0);
 
+        //Ao pressionar o campo data, uma janela deve aparecer com o calendário default do android
+        //Esse elemento se chama DatePicker
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
+            //No momento que o usuário define uma data e aceita, essa função é executada
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
@@ -41,6 +45,7 @@ public class NovaProva extends AppCompatActivity {
 
         };
 
+        //Quando o usuário pressiona o campo data, abre o calendário
         txtData.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
             @Override
@@ -51,11 +56,12 @@ public class NovaProva extends AppCompatActivity {
                     new DatePickerDialog(NovaProva.this, date, myCalendar
                             .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                             myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-                    updateLabel();
                 }
             }
         });
 
+        //Se o usuário pressionar uma segunda vez o campo, abre novamente
+        //Dois eventos utilizados, o OnClick Não reconheceu o primeiro click no elemento de texto
         txtData.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,16 +71,16 @@ public class NovaProva extends AppCompatActivity {
                     new DatePickerDialog(NovaProva.this, date, myCalendar
                             .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                             myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-                    updateLabel();
             }
         });
 
+        //Temposrário, aquele picker da hora............
         TimePicker tp = findViewById(R.id.provaHorario);
         tp.setIs24HourView(true);
 
 
     }
-
+    //Atualiza o campo data com a data selecionada pelo usuario
     private void updateLabel() {
         String myFormat = "MM/dd/yy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);

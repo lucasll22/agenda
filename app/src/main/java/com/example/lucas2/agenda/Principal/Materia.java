@@ -1,13 +1,22 @@
 package com.example.lucas2.agenda.Principal;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import java.io.Serializable;
 
 /**
  * Created by lucas on 12/04/2018.
  */
 
+@Entity
 public class Materia implements Serializable{
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
     private String descr;
+
     private int dia;
 
     public String getDescr() {
@@ -20,6 +29,19 @@ public class Materia implements Serializable{
 
     public void setDia(int dia) {
         this.dia = dia;
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+    @NonNull
+    public int getId() {
+        return id;
+    }
+
+    public void setId(@NonNull int id) {
+        this.id = id;
     }
 
     public String getDiaString(){
