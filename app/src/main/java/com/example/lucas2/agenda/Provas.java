@@ -43,4 +43,11 @@ public class Provas extends AppCompatActivity {
         Intent i = new Intent(this, NovaProva.class);
         startActivity(i);
     }
+
+    public void adicionarTrabalho(View view) {
+        Intent i = new Intent(this, NovoTrabalho.class);
+        startActivity(i);
+    }
+
+
 }

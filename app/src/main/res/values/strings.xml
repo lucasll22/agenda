@@ -8,4 +8,6 @@
     <string name="materia">Materia</string>
     <string name="data">Data</string>
     <string name="hora">Hora</string>
+    <string name="trabalho">Trabalho:</string>
+    <string name="data_final">Data final:</string>
 </resources>

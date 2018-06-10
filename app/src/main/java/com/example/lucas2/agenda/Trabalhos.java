@@ -1,7 +1,9 @@
 package com.example.lucas2.agenda;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -29,4 +31,10 @@ public class Trabalhos extends AppCompatActivity {
         listaTrabalhos.setAdapter(adTrabalhos);
 
     }
+
+    public void adicionarTrabalho(View view) {
+        Intent i = new Intent(this, NovoTrabalho.class);
+        startActivity(i);
+    }
+
 }
