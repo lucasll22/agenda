@@ -1,6 +1,7 @@
 package com.example.lucas2.agenda;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.lucas2.agenda.Principal.Materia;
 import com.example.lucas2.agenda.Principal.Prova;
 
 import java.io.File;
@@ -28,14 +30,15 @@ public class Provas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provas);
 
-        // --------------------- carregar trabalhos e atualizar lista
+        //materias = (ArrayList<Materia>) getIntent().getSerializableExtra("materias");
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                provas = AppLifeCycle.db.provaDao().getAll();
+                atualizarProvas();
+            }
 
-        ArrayAdapter<Prova> adProvas =
-                new ArrayAdapter<Prova>(this, android.R.layout.simple_list_item_1, provas);
-
-        ListView listaProvas = findViewById(R.id.listaProvas);
-        listaProvas.setAdapter(adProvas);
-
+        });
 
     }
 
@@ -49,5 +52,13 @@ public class Provas extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void atualizarProvas()
+    {
+        ArrayAdapter<Prova> adProva =
+                new ArrayAdapter<Prova>(this, android.R.layout.simple_list_item_1, provas);
 
+        ListView listaPRovas = findViewById(R.id.listaProvas);
+        listaPRovas.setAdapter(adProva);
+
+    }
 }

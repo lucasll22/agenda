@@ -20,6 +20,7 @@ public class AppLifeCycle extends Application {
         {
             db = Room.databaseBuilder(getApplicationContext(),
                     AppDataBase.class, "database-name").build();
+            
             //Mensagem na tela
             Toast.makeText(this, "Banco de dados criado", Toast.LENGTH_SHORT).show();
 
