@@ -47,7 +47,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/adicionar"
-        android:onClick="adicionarTrabalho"/>
+        android:onClick="adicionarTrabalho"
+        android:textColor="@color/white_button"
+        android:background="@color/green_buttons"
+        />
 
 
 </LinearLayout>

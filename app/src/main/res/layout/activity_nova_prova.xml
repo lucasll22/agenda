@@ -65,6 +65,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/adicionar"
-        android:onClick="adicionarProva"/>
+        android:onClick="adicionarProva"
+        android:textColor="@color/white_button"
+        android:background="@color/green_buttons"
+        />
 
 </LinearLayout>

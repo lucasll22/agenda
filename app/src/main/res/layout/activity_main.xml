@@ -15,7 +15,7 @@
         android:text="Bem vindo ao app!!!"
         android:textSize="20sp"
         android:layout_marginVertical="12px"
-
+        android:textColor="@color/green_text"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -23,6 +23,7 @@
         android:text="Informse seus dados:"
         android:textSize="15sp"
         android:layout_marginVertical="12px"
+        android:textColor="@color/green_text"
 
         />
 
@@ -30,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome"
-        android:background="@color/grey"
+        android:background="@color/green_form"
         android:id="@+id/nome"
         android:layout_marginVertical="12px"
         />
@@ -39,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Instituição"
-        android:background="@color/grey"
+        android:background="@color/green_form"
         android:id="@+id/instituição"
         android:layout_marginVertical="12px"
 
@@ -51,6 +52,7 @@
         android:onClick="prosseguir"
         android:id="@+id/prosseguir"
         android:layout_marginVertical="12px"
-
+        android:textColor="@color/white_button"
+        android:background="@color/green_buttons"
         />
 </LinearLayout>

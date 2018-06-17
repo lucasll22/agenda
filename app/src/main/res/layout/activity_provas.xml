@@ -23,6 +23,8 @@
         android:layout_weight="0.2"
         android:text="Adicionar"
         android:onClick="adicionarProva"
+        android:textColor="@color/white_button"
+        android:background="@color/green_buttons"
 
         />
 

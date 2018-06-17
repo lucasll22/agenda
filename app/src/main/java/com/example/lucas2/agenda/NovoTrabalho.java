@@ -8,11 +8,17 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 
 import com.example.lucas2.agenda.Principal.Materia;
+import com.example.lucas2.agenda.Principal.Prova;
+import com.example.lucas2.agenda.Principal.Trabalho;
 
+import java.sql.Time;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class NovoTrabalho extends AppCompatActivity {
@@ -89,17 +95,24 @@ public class NovoTrabalho extends AppCompatActivity {
 
 
     public void adicionarTrabalho(View view) {
-        final Materia temp = new Materia();
+        final Trabalho temp = new Trabalho();
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-        EditText descr = findViewById(R.id.matDescr);
-        Spinner dia = findViewById(R.id.matSpinner);
+        EditText descr = findViewById(R.id.trabDescr);
+        EditText trabData = findViewById(R.id.trabData);
+        try {
+            Date data = sdf.parse(trabData.getText().toString());
+            temp.setDtFinal(data);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         temp.setDescr(descr.getText().toString());
-        temp.setDia(dia.getSelectedItemPosition());
 
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
-                AppLifeCycle.db.materiaDao().insertAll(temp);
+                AppLifeCycle.db.trabalhoDao().insertAll(temp);
             }
         });
 
