@@ -12,14 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="10px">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/trabalho"/>
+
         <EditText
-            android:layout_width="300px"
-            android:layout_height="wrap_content"
-            android:background="@color/form"
+            android:layout_width="match_parent"
+            android:hint="@string/trabalho"
+            android:layout_height="70px"
+            android:textColorHint="@color/green_form2"
+            android:background="@color/green_form"
             android:id="@+id/trabDescr">
 
         </EditText>
@@ -30,21 +29,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="10px">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/data_final"/>
+
         <EditText
             android:id="@+id/trabData"
             android:inputType="none"
-            android:layout_width="300px"
-            android:layout_height="wrap_content"
-            android:background="@color/form"
-            android:layout_marginLeft="10px"/>
+            android:hint="@string/data_final"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/green_form2"
+            android:layout_height="70px"
+            android:background="@color/green_form"
+            />
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/adicionar"
         android:onClick="adicionarTrabalho"

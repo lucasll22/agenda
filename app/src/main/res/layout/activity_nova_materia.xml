@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical"
     tools:context="com.example.lucas2.agenda.NovaMateria">
 
@@ -15,9 +16,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dia"/>
+            android:text="@string/dia"
+            android:textColor="@color/green_form2"
+            android:textSize="18sp"
+            />
         <Spinner
-            android:layout_width="300px"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/form"
             android:spinnerMode="dropdown"
@@ -28,23 +32,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10px">
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="10px">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/descri_o"/>
-        <EditText
+         <EditText
             android:id="@+id/matDescr"
-            android:layout_width="300px"
-            android:layout_height="wrap_content"
-            android:background="@color/form"
-            android:layout_marginLeft="10px"/>
+            android:hint="@string/descri_o"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:background="@color/green_form"
+            />
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="@string/adicionar"
         android:onClick="adicionarMateria"
         android:textColor="@color/white_button"

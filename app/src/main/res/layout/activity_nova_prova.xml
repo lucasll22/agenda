@@ -12,16 +12,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="10px">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/materia"/>
+
         <EditText
-            android:layout_width="300px"
-            android:layout_height="wrap_content"
-            android:background="@color/form"
+            android:layout_width="match_parent"
+            android:hint="@string/materia"
+            android:layout_height="70px"
+            android:background="@color/green_form"
+            android:textColorHint="@color/green_form2"
             android:id="@+id/provaDescr"
-            android:layout_marginLeft="95px"/>
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -29,17 +28,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="10px">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/data"/>
+
         <EditText
             android:id="@+id/provaData"
             android:inputType="none"
-            android:layout_width="300px"
-            android:layout_height="wrap_content"
-            android:background="@color/form"
-            android:layout_marginLeft="10px"/>
+            android:hint="@string/data"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:background="@color/green_form"
+            android:textColorHint="@color/green_form2"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,22 +47,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hora"/>
+            android:text="@string/hora"
+            android:textSize="18sp"
+            android:textColor="@color/green_form2"/>
         <TimePicker
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:id="@+id/provaHorario"
             android:timePickerMode="spinner"
             android:inputType="none"
-            android:background="@color/form"
-            android:layout_marginLeft="10px"/>
+            android:background="@color/grey"
+            android:layout_margin="10px"
+
+            />
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/adicionar"
+        android:layout_gravity="bottom"
         android:onClick="adicionarProva"
         android:textColor="@color/white_button"
         android:background="@color/green_buttons"
