@@ -48,8 +48,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hora"
-            android:textSize="18sp"
-            android:textColor="@color/green_form2"/>
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/green_form2"
+            android:textSize="18sp" />
         <TimePicker
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +58,7 @@
             android:id="@+id/provaHorario"
             android:timePickerMode="spinner"
             android:inputType="none"
-            android:background="@color/grey"
+            android:background="@color/green_form"
             android:layout_margin="10px"
 
             />
